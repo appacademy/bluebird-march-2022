@@ -1,0 +1,11 @@
+<ul>
+  <h3> <%= user.username %> </h3>
+  <li> <%= user.age %> </li>
+  <li> <%= user.email %> </li>
+</ul>
+
+<% if action == :from_show_page %>
+  <li><a href="<%= users_url %>">User Index</a></li>
+<% elsif action == :from_index_page %>
+  <li><a href="<%= user_url(user.id) %>">User's Show Page</a></li>
+<% end %>

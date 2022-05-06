@@ -22,4 +22,18 @@ Rails.application.routes.draw do
   # resources :chirps, except: [:new, :edit] # specify which routes to exclue (we'll learn about :new and :edit when we learn about views)
   # resources :chirps # creates all 7 restful routes for chirps
 
+
+  # USERS ROUTES
+    # html url, HTTP VERB, url path, controller method
+    
+    # users GET    /users(.:format)users#index
+    # users POST   /users(.:format) users#create
+    # new_user GET    /users/new(.:format) users#new
+    # edit_user GET    /users/:id/edit(.:format) users#edit
+    # user GET    /users/:id(.:format) users#show
+    # user  PATCH  /users/:id(.:format) users#update
+    # user PUT    /users/:id(.:format) users#update
+    # user DELETE /users/:id(.:format) users#destroy
+  resources :users
+
 end
