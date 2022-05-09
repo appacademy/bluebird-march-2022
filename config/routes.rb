@@ -36,4 +36,6 @@ Rails.application.routes.draw do
     # user DELETE /users/:id(.:format) users#destroy
   resources :users
 
+  resource :session, only: [:new, :create, :destroy]
+
 end

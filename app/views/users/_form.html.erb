@@ -47,13 +47,15 @@
 </label>
 
     <br>
+  <% if type == :new_user_form %>
     <label>Password:
-  <input 
-    type="password"
-    name="user[password]"
-    value="<%= @user.password %>"
-    >
-</label>
+      <input 
+        type="password"
+        name="user[password]"
+        value=""
+        >
+    </label>
+  <% end %>
 
 <br>
   <input type="submit" value="<%= button_text %>">
