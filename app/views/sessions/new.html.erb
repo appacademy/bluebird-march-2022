@@ -1,8 +1,9 @@
 <h2>Login</h2>
 
 <form action="<%= session_url %>" method="POST">
+<%= auth_token %>
     <label>Username:
-        <input type="text" name="user[username]" value="<%= @user ? @user.username: "" %>">
+        <input type="text" name="user[username]" value="<%= @user ? @user.username : "" %>">
     </label>
     <br>
     <label>Password:
@@ -11,3 +12,7 @@
     <br>
     <input type="submit" value="Login">
 </form>
+
+<%# def session_url
+    return "http://localhost:3000/session"
+end %>
