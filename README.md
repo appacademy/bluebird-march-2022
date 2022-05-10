@@ -5,3 +5,4 @@
 3. [Routes and Controllers](https://github.com/appacademy/bluebird-march-2022/tree/routes-and-controllers)
 4. [Views](https://github.com/appacademy/bluebird-march-2022/tree/views)
 5. [User Auth](https://github.com/appacademy/bluebird-march-2022/tree/user-auth)
+6. [CSRF](https://github.com/appacademy/bluebird-march-2022/tree/csrf)
