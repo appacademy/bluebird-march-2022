@@ -18,17 +18,13 @@ class SessionsController < ApplicationController
             login(@user)
             redirect_to user_url(@user)
         else
-            # no errors yet, that's tomorrow
-            flash.now[:errors] = ['Invalid Credentials']
+            # we need some errors
             render :new
         end
     end 
 
     def destroy
         logout!
-
-        flash[:success] = ["Successfully logged out"]
-
         redirect_to new_session_url
     end
 end
