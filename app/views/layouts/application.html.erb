@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <header>
       <h1>Welcome to BlueBird</h1>
       <% if logged_in? %>
@@ -24,6 +25,22 @@
         <a href="<%= new_session_url %>">Login</a>
       <% end %>
     </header>
+
     <%= yield %>
+
+    <br>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error|%>
+        <li><%= error %></li>
+      <% end %>
+    <% end %>
+
+    <% if flash[:success] %>
+      <% flash[:success].each do |message|%>
+        <li><%= message %></li>
+      <% end %>
+    <% end %>
+
   </body>
 </html>

@@ -1,0 +1,20 @@
+<h3>Chirp</h3>
+
+<li>Body: <%= chirp.body %></li>
+<li>Author: <%= chirp.author.username %></li>
+<li>Number of Likes: <%= chirp.likes.count %></li>
+
+<%# Adding a delete button for deleting a chirp E2E %>
+<% if current_user.id == chirp.author.id %>
+  <form action="<%= chirp_url(chirp.id) %>" method="POST">
+    <input type='hidden', name='_method', value='DELETE'>
+    <input type='submit', value='Delete this Chirp'>
+  </form>
+<% end %>
+<% if form == :show %>
+<%#= a tags = default get requests  %>
+  <a href="<%= chirps_url %>">Back to the index!</a>
+<% else %>
+<%# chirp arg in the url refers to the chirp we are iterating over in our index template/view  %>
+  <a href="<%= chirp_url(chirp) %>">Look at this chirp!</a>
+<% end %>

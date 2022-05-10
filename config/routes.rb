@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   # Shortcut for defining multiple routes with aliases:
 
-  resources :chirps, only: [:index, :show, :create, :update, :destroy]
+  resources :chirps, only: [:index, :show, :create, :update, :destroy, :new]
   # resources :chirps, except: [:new, :edit] # specify which routes to exclue (we'll learn about :new and :edit when we learn about views)
   # resources :chirps # creates all 7 restful routes for chirps
 

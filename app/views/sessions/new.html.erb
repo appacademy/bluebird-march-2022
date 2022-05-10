@@ -2,7 +2,7 @@
 
 <form action="<%= session_url %>" method="POST">
     <label>Username:
-        <input type="text" name="user[username]" value="<%= @user.username %>">
+        <input type="text" name="user[username]" value="<%= @user ? @user.username: "" %>">
     </label>
     <br>
     <label>Password:

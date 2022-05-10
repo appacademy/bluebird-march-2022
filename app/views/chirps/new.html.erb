@@ -1,0 +1,7 @@
+<h1>New chirp</h1>
+<form action="<%= chirps_url %>" method="post">
+  <label for="chirp_body">Body:
+  </label>
+  <input type="text" id="chirp_body" name="chirp[body]" value="<%= @chirp.body %>">
+  <input type="submit" value="Create chirp">
+</form>

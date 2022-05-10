@@ -1,0 +1,6 @@
+
+<h1>All the chirps!</h1>
+
+<% @chirps.each do |chirp| %>
+    <%= render "chirp", chirp: chirp, form: :index %>
+<% end %>
