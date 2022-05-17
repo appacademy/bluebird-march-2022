@@ -1,6 +1,6 @@
 class ChirpsController < ApplicationController
 
-    before_action :require_logged_in, only: [:new, :create, :index, :show]
+    # before_action :require_logged_in, only: [:new, :create, :index, :show]
 
     def index
 		if params[:user_id]
